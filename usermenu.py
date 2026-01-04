@@ -12,6 +12,14 @@ print ("Please type the number corresponding to your choice:")
 print ("-----------------------------------")
 
 while True:
+        print ("Please select an option from the menu below:")
+        print ("1. Add Entry")
+        print ("2. Search Entries")
+        print ("3. View All Entries")
+        print ("4. Exit")
+        print ("-----------------------------------")
+        print ("Please type the number corresponding to your choice:")
+        print ("-----------------------------------")
         user_input = input()
         if user_input == "1":
                 lines = []
