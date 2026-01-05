@@ -12,7 +12,7 @@ print ("Please type the number corresponding to your choice:")
 print ("-----------------------------------")
 
 while True:
-        print ("Please select an option from the menu below:")
+        print ("Re-select an option from the menu below:")
         print ("1. Add Entry")
         print ("2. Search Entries")
         print ("3. View All Entries")
@@ -49,10 +49,41 @@ while True:
                                 lines.append(user_input)
            
                    
-                #code for adding an entry here
         elif user_input == "2":
                 print ("You have selected Search Entries.")
-                #code for searching entries here
+                
+                if entries == []:
+                                print ("Nothing to search.")
+                                continue
+                else:
+                        print ("Type a term to search.")
+                        print("Case sensitivity matters. Type //done to leave.")
+                        while True: 
+                                user_input = input()
+                                disallow = user_input.strip()
+                                found = [] 
+                                
+                                if user_input == "//done":
+                                        break
+                                
+                                elif disallow == "":
+                                        print ("You must type at least one character.")
+                                        continue
+                                        #display search results w the result from user input
+                                        
+                                for entry in entries:
+                                        if user_input in entry:
+                                                found.append(entry)
+                                if found == []:
+                                        print ("No matches found. Try again.")
+                                        continue
+                                else:
+                                        for match in found:
+                                                print (match)
+                                                continue
+                                
+                                        
+                                
         elif user_input == "3":
                 print ("You have selected View All Entries.")
                 #code for viewing entries here
