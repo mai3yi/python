@@ -1,3 +1,5 @@
+import time 
+
 entries = []
 print ("___________________________________")
 print ("Welcome to the User Log System.")
@@ -46,6 +48,8 @@ while True:
                                         print ("___________________________________")
                                         print ("Entry saved.")
                                         print ("___________________________________")
+                                        time.sleep(2)
+
                                         break
                         elif user_input == "//back":
                                 break
@@ -80,6 +84,7 @@ while True:
                                 found = [] 
                                 
                                 if user_input == "//done":
+                                        time.sleep(2)
                                         break
                                 
                                 elif disallow == "":
@@ -111,6 +116,7 @@ while True:
                         print ("___________________________________")
                         print ("Nothing here.")
                         print ("___________________________________")
+                        time.sleep(2)
                         
                 else:
                         for entry in entries:
