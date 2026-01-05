@@ -82,11 +82,16 @@ while True:
                                                 print (match)
                                                 continue
                                 
-                                        
-                                
         elif user_input == "3":
                 print ("You have selected View All Entries.")
-                #code for viewing entries here
+                
+                if entries == []:
+                        print ("Nothing here.")
+                        
+                else:
+                        for entry in entries:
+                                print (entry)
+                        
         elif user_input == "4":
                 print ("Exiting program. Bye!")
                 break
